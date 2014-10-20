@@ -8,7 +8,7 @@
  * @author apple
  */
 public class Tacos_Factory_GUI extends javax.swing.JFrame {
-    Tacos_Factory tacos;
+    Tacos_Factory tacos= new Tacos_Factory();;
     /**
      * Creates new form Tacos_Factory_GUI
      */
@@ -125,13 +125,15 @@ public class Tacos_Factory_GUI extends javax.swing.JFrame {
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
             // TODO add your handling code here:
-        Tacos_Factory tacos= new Tacos_Factory();
+       
         tacos.startTacosFactory(ChefSlider.getValue(),MaistroSlider.getValue());
     }//GEN-LAST:event_startActionPerformed
 
     private void ChefSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ChefSliderStateChanged
         // TODO add your handling code here:
-        tacos.chef_velocity=ChefSlider.getValue();
+        tacos.Changue_Chef_velocity(ChefSlider.getValue());
+        //tacos.chef_velocity=ChefSlider.getValue();
+        
     }//GEN-LAST:event_ChefSliderStateChanged
 
     private void MaistroSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MaistroSliderStateChanged

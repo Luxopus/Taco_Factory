@@ -26,6 +26,14 @@ public class Tacos_Factory implements Runnable {
 
 
     }
+    
+    public void Changue_Chef_velocity(int vel){
+        chef_velocity=vel*45;
+    }
+    
+    public void Changue_Maistro_velocity(int vel){
+        maistro_velocity=vel*45;
+    }
   
     public void startTacosFactory(int chefVelocity, int maistroVelocity){
         //y=-45x+5000
@@ -62,7 +70,7 @@ public class Tacos_Factory implements Runnable {
                 n.release();
                 s.release();
                 try {
-                    Thread.sleep(chef_velocity);
+                    Thread.sleep(5000-chef_velocity);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -107,7 +115,7 @@ public class Tacos_Factory implements Runnable {
                 s.release();
                 consume(producto);
                 try {
-                    Thread.sleep(maistro_velocity);
+                    Thread.sleep(5000-maistro_velocity);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
